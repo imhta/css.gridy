@@ -1,0 +1,13 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.gridy {
+  display: grid;
+}
+
+/*# sourceMappingURL=gridy.css.map */
