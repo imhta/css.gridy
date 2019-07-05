@@ -1,9 +1,52 @@
 @import reset
+@import url('https://fonts.googleapis.com/css?family=Orbitron:900|Roboto&display=swap')
 
+$global-gmp: 10px
+$total-child: 12
+$row-col-limit: 12
+$gmp-limit: 5
 
 .gridy
     display: grid
 
-    
+.inline-gridy
+    display: inline-grid
+
+.gridy, .inline-gridy
+    @for $i from 1 through $total-child
+        .child-#{$i}
+            grid: child-#{$i}
+
+.width-100per
+    width: 100%
+
+.height-100per
+    height: 100%
+
+.width-100vw
+    width: 100vw
+
+.height-100vh
+    height: 100vh
+
+@for $i from 1 through $row-col-limit 
+  .col-#{$i} 
+    grid-template-columns: repeat($i, 1fr)
+  .row-#{$i}
+    grid-template-rows: repeat($i, 1fr) 
 
 
+@for $i from 0 through $gmp-limit
+    .gap-#{$i}
+        grid-gap: #{$i * $global-gmp}
+    .margin-#{$i}
+        margin: #{$i * $global-gmp}
+    .padding-#{$i}
+        padding: #{$i * $global-gmp}
+
+
+// typography
+
+.heading
+    font-family: 'Orbitron', sans-serif
+        
