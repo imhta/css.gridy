@@ -6,6 +6,13 @@ $total-child: 12
 $row-col-limit: 12
 $gmp-limit: 5
 
+// color
+$light-color: white
+$dark-color: black
+$primary-color: #00AAAA
+$secondary-color: grey
+$danger-color: red
+
 .gridy
     display: grid
 
@@ -17,24 +24,97 @@ $gmp-limit: 5
         .child-#{$i}
             grid: child-#{$i}
 
-.width-100per
+// align items and justify items
+.ji-c
+    justify-items: center
+.ji-s
+    justify-items: start
+.ji-e
+    justify-items: end
+.ji-s
+    justify-items: stretch
+.ai-c
+    align-items: center
+.ai-s
+    align-items: start
+.ai-e
+    align-items: end
+.ai-s
+    align-items: stretch
+
+// align content and justify content
+.jc-c
+    justify-content: center
+.jc-s
+    justify-content: start
+.jc-e
+    justify-content: end
+.jc-b
+    justify-content: space-between
+.jc-a
+    justify-content: space-around
+.jc-se
+    justify-content: space-evenly
+.ac-c
+    align-content: center
+.ac-s
+    align-content: start
+.ac-e
+    align-content: end
+.ac-b
+    align-content: space-between
+.ac-a
+    align-content: space-around
+.ac-se
+    align-content: space-evenly
+
+// align self and justify self
+.js-c
+    justify-self: center
+.js-s
+    justify-self:  start
+.js-e
+    justify-self: end
+.js-s
+    justify-self: stretch
+.as-c
+    align-self: center
+.as-s
+    align-self: start
+.as-e
+    align-self: end
+.as-s
+    align-self: stretch
+
+// spanning item size
+@for $i from 1 through 13
+    @for $j from 1 through 13
+        .grow-row-#{$i}-#{$j}
+            grid-row-start: $i
+            grid-row-end:   $j
+        .grow-col-#{$i}-#{$j}
+            grid-column-start: $i
+            grid-column-end:   $j
+
+
+// width and height
+.w-100
     width: 100%
 
-.height-100per
+.h-100
     height: 100%
 
-.width-100vw
+.vw-100
     width: 100vw
 
-.height-100vh
+.vh-100
     height: 100vh
 
 @for $i from 1 through $row-col-limit 
   .col-#{$i} 
     grid-template-columns: repeat($i, 1fr)
-  .row-#{$i}
-    grid-template-rows: repeat($i, 1fr) 
-
+  .row-#{$i} 
+    grid-template-rows: repeat($i, 1fr)
 
 @for $i from 0 through $gmp-limit
     .gap-#{$i}
@@ -49,4 +129,29 @@ $gmp-limit: 5
 
 .heading
     font-family: 'Orbitron', sans-serif
-        
+.ta-center
+    text-align: center
+.ta-left
+    text-align: left
+.ta-right
+    text-align: right
+.ta-justify
+    text-align: justify
+
+// color section
+.text-light
+    color: $light-color
+.text-danger
+    color: $danger-color
+.text-primary
+    color: $primary-color
+.text-secondary
+    color: $secondary-color
+.text-dark 
+    color: $dark-color
+
+.bg-light
+    background-color: $light-color
+
+.bg-dark
+    background-color: $dark-color

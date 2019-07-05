@@ -1,0 +1,33 @@
+nav{
+    background-color:  #00AAAA
+}
+
+header h1{
+    text-align:center;
+    color: #00AAAA;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+header p{
+    text-align:center;
+    letter-spacing: 2px;
+}
+
+.links{
+    background-color: #00AAAA;
+    font-size: 20px;
+}
+
+section article{
+    background-color: bisque;
+    width: 100%;
+    font-size: 28px;
+    padding: 10px 0px 10px 10px;
+}
+footer{
+    background-color: #00AAAA;
+    font-size: 20px;
+}
+footer article{
+    background-color: transparent;
+}
