@@ -39,19 +39,15 @@ main .list-content ul li a:hover{
     background-color: #00AAAA;
     color: white;
 }
-code{
-    background-color: rgba(211, 211, 211, 0.664);
-    border-radius: 5px;
-    padding: 10px 20px;
-    min-width: 320px;
-}
 footer{
     background-color: #00AAAA;
     font-size: 20px;
+    margin: 0px;
 }
-footer article{
-    background-color: transparent;
+footer a{
+    color: white;
 }
+
 @media only screen and (max-width: 750px){
     header section{
         padding: 20px 20px;
@@ -65,5 +61,8 @@ footer article{
        header section p{
            font-weight: 800;
            letter-spacing: 2px;
+       }
+       main section article h1{
+        font-size: 28px;
        }
 }
