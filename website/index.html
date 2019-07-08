@@ -38,90 +38,115 @@
   </head>
   <body>
     <header>
-      <h1 class="heading padding-2">
-        css.gridy
-      </h1>
-      <p class="text-secondary">Simple CSS Grid based framework for layouts</p>
-      <nav class="links">
-        <ul class="gridy padding-2 col-3 ji-c">
-          <li>
-            <a href="#footer" class="text-light">about css.gridy</a>
-          </li>
-          <li>
-            <a href="#footer" class="text-light">learn</a>
-          </li>
-
-          <li>
-            <a href="https://github.com/imhtapm/css.gridy" class="text-light">github</a>
-          </li>
-        </ul>
+      <section>
+        <h1 class="heading padding-2">
+          css.gridy
+        </h1>
+        <p class="text--secondary">Simple Responsive framework for layouts</p>
+      </section>
+      <nav
+        class="links display--flex justify-content--flex-end align-items--center"
+      >
+        <a class="margin-right--2" href="https://github.com/imhtapm/css.gridy"
+          >github</a
+        >
       </nav>
     </header>
-    <main>
-      <section class="gridy m-2 col-4 gap-2 margin-2">
-        <article class="article grow-col-1-4">css.gridy</article>
-        <article class="article">will</article>
-        <article class="article">help</article>
-        <article class="article">you</article>
+    <main class="container">
+      <section class="list-content">
+        <header>
+          <h1 class="heading text--primary">list of content</h1>
+        </header>
+        <ul class="width--100 display--flex  align-items--center flex--wrap">
+          <li class="margin--1">
+            <a class="padding--1" href="#get-start">getting started</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#gridy">gridy</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#inline-gridy">inline-gridy</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#grid-child">grid-child</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#no-of-cols">no-of-cols</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#no-of-rows">no-of-rows</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#grid-gap">grid-gap</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#margin-and-padding"
+              >margin-and-padding</a
+            >
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#spaning-grid">spaning-grid</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#display">display</a>
+          </li>
+          <li class="margin--1"><a class="padding--1" href="#flex">flex</a></li>
+          <li class="margin--1">
+            <a class="padding--1" href="#position">position</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#z-index">z-index</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#justify-and-align"
+              >justify-and-align</a
+            >
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#width-and-height">width-and-height</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#headings">headings</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#paragraphs">paragraphs</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#font-weights">font-weights</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#text-align">text-align</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#text-color">text-color</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#background-color">background-color</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#container">container</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#row-and-col">row-and-col</a>
+          </li>
+          <li class="margin--1">
+            <a class="padding--1" href="#small-and-medium">small-and-medium</a>
+          </li>
+        </ul>
       </section>
-      <section class="gridy col-4 gap-2 margin-2">
-        <article class="article grow-col-1-2">built</article>
-        <article class="article grow-col-1-3">complex</article>
-        <article class="article grow-col-1-4">easily</article>
-        <article class="article grow-col-3-5">with</article>
-        <article class="article grow-col-2-4">markup</article>
-      </section>
 
-      <hr />
-
-      <section class="gridy m-2 col-12 row-4 gap-2 margin-2">
-        <article class="article grow-col-1-8">1</article>
-        <article class="article">2</article>
-        <article class="article">3</article>
-        <article class="article">4</article>
-
-        <article class="article grow-col-1-3">5</article>
-        <article class="article grow-col-4-5">6</article>
-        <article class="article grow-col-1-6">7</article>
-        <article class="article grow-col-9-13">8</article>
-        <article class="article grow-col-1-13">9</article>
-      </section>
-
-      <hr />
-      <section class="gridy m-2 col-6 row-3 gap-2 margin-2">
-        <article class="article">1</article>
-        <article class="article">2</article>
-        <article class="article">3</article>
-        <article class="article">4</article>
-
-        <article class="article grow-row-1-3">
-          <img src="./assets/gridy-logo.png" />
+      <section class="content">
+        <article id="get-start">
+            <header>
+              <h1 class="heading text--primary">get started</h1></header>
+              <p class="text--secondary">
+                  Looking to quickly add css.gridy to your project?. Using a package manager or need to download the source files? Head to the downloads page.
+              </p>
+              <code>
+                asadas
+              </code>
         </article>
-        <article class="article">6</article>
-        <article class="article">7</article>
-        <article class="article">8</article>
-        <article class="article">9</article>
-        <article class="article">1</article>
-        <article class="article">2</article>
-        <article class="article">3</article>
-        <article class="article">4</article>
-
-        <article class="article">5</article>
-        <article class="article">6</article>
-        <article class="article">7</article>
-        <article class="article">8</article>
       </section>
     </main>
-
-    <footer id="footer">
-      <section class="inline-gridy col-12 row-1 w-100 gap-2">
-        <article class="article grow-col-1-8 text-light">
-          css gridy's tutorial coming soon
-        </article>
-        <article class="article grow-col-6-12 ta-right text-light">
-                open source under MIT license
-        </article>
-      </section>
-    </footer>
   </body>
 </html>
