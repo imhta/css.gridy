@@ -6,6 +6,29 @@ $total-child: 12
 $row-col-limit: 12
 $gmp-limit: 5
 
+// color
+$light-color: white
+$dark-color: black
+$primary-color: #00AAAA
+$secondary-color: grey
+$danger-color: red
+
+$width: 96% 
+$gutter: 4% 
+$breakpoint-small:  45em  // max - 720px 
+$breakpoint-med: 45em  // min - 720px
+$breakpoint-large: 64em  // min - 1024px
+
+    
+$font-weight-light: 300 
+$font-weight-regular: 400 
+$font-weight-heavy: 700 
+
+// colors
+$dark-grey: #333447 
+$dark-gray: #333447  
+
+
 .gridy
     display: grid
 
@@ -13,40 +36,442 @@ $gmp-limit: 5
     display: inline-grid
 
 .gridy, .inline-gridy
-    @for $i from 1 through $total-child
-        .child-#{$i}
-            grid: child-#{$i}
+    @for  $i from 1 through $total-child
+        .child-#{$i} 
+            grid: child-#{$i} 
 
-.width-100per
+
+@for  $i from 1 through $row-col-limit 
+  .no-of-col--#{$i}  
+    grid-template-columns: repeat( $i, 1fr)
+  .no-of-row--#{$i}  
+    grid-template-rows: repeat( $i, 1fr)
+
+@for  $i from 0 through $gmp-limit
+    .gap--#{$i} 
+        grid-gap: $i * $global-gmp 
+
+    .margin--#{$i} 
+        margin: $i * $global-gmp 
+    .padding--#{$i} 
+        padding: $i * $global-gmp 
+    
+    .margin-left--#{$i} 
+        margin-left: $i * $global-gmp 
+    .padding-left--#{$i} 
+        padding-left: $i * $global-gmp
+
+    .margin-right--#{$i} 
+        margin-right: $i * $global-gmp 
+    .padding-right--#{$i} 
+        padding-right: $i * $global-gmp
+
+    .margin-bottom--#{$i} 
+        margin-left: $i * $global-gmp 
+    .padding-bottom--#{$i} 
+        padding-left: $i * $global-gmp
+
+    .margin-top--#{$i} 
+        margin-top: $i * $global-gmp 
+    .padding-top--#{$i} 
+        padding-top: $i * $global-gmp
+    
+
+.margin-auto
+    margin: auto
+.padding-auto
+    padding: auto    
+
+// spanning item size
+@for  $i from 1 through 13
+    @for $j from 1 through 13
+        .grow-row-#{$i}-#{$j} 
+            grid-row-start:  $i
+            grid-row-end:   $j
+        .grow-col-#{$i}-#{$j} 
+            grid-column-start:  $i
+            grid-column-end:   $j
+
+// display
+.display--inline
+    display: inline
+.display--inline-block
+    display: inline-block
+.display--block
+    display: block
+.display--table
+    display: table
+.display--none
+    display: none
+.display--flex
+    display: flex
+.display--inline-flex
+    display: inline-flex
+.hide
+  display: none
+
+
+
+
+// flex
+.flex-direction--col
+    flex-direction: column
+.flex-direction--row
+    flex-direction: row
+.flex-direction--col-reverse
+    flex-direction: column-reverse
+.flex-direction--row-reverse
+    flex-direction: row-reverse
+.flex--wrap-reverse
+    flex-wrap: wrap-reverse  
+.flex--no-wrap
+    flex-wrap: nowrap  
+.flex--wrap
+    flex-wrap: wrap
+.flex--wrap-reverse
+    flex-wrap: wrap-reverse
+// position
+.position--absolute
+    position: absolute
+.position--relative
+    position: relative
+.position--sticky
+    position: sticky
+.position--static
+    position: static
+.position--fixed
+    position: fixed
+
+// z-index 
+.z-index--minus-1
+   z-index:  -1
+.z-index--zero
+   z-index:  0
+@for  $i from 0 through 12
+    .z-index--#{$i}
+        z-index: $i
+
+// align items and justify items
+
+.justify-items--center
+    justify-items: center
+.justify-items--flex-start
+    justify-items: flex-start
+.justify-items--flex-end
+    justify-items: flex-end
+.justify-items--stretch
+    justify-items: stretch
+
+.align-items--center
+    align-items: center
+.align-items--flex-start
+    align-items: flex-start
+.align-items--flex-end
+    align-items: flex-end
+.align-items--stretch
+    align-items: stretch
+
+// align content and justify content
+
+.justify-content--center
+    justify-content: center
+.justify-content--flex-start
+    justify-content: flex-start
+.justify-content--flex-end
+    justify-content: flex-end
+.justify-content--space-between
+    justify-content: space-between
+.justify-content--space-around
+    justify-content: space-around
+.justify-content--space-evenly
+    justify-content: space-evenly
+
+.align-content--center
+    align-content: center
+.align-content--flex-start
+    align-content: flex-start
+.align-content--flex-end
+    align-content: flex-end
+.align-content--space-between
+    align-content: space-between
+.align-content--space-around
+    align-content: space-around
+.align-content--space-evenly
+    align-content: space-evenly
+
+// align self and justify self
+
+.justify-self--center
+    justify-self: center
+.justify-self--start
+    justify-self:  start
+.justify-self--end
+    justify-self: end
+.justify-self--stretch
+    justify-self: stretch
+
+.align-self--center
+    align-self: center
+.align-self--start
+    align-self: start
+.align-self--end
+    align-self: end
+.align-self--strectch
+    align-self: stretch
+
+
+
+// width and height
+.width--100
     width: 100%
 
-.height-100per
+.height--100
     height: 100%
 
-.width-100vw
+.vw--100
     width: 100vw
 
-.height-100vh
+.vh--100
     height: 100vh
 
-@for $i from 1 through $row-col-limit 
-  .col-#{$i} 
-    grid-template-columns: repeat($i, 1fr)
-  .row-#{$i}
-    grid-template-rows: repeat($i, 1fr) 
 
 
-@for $i from 0 through $gmp-limit
-    .gap-#{$i}
-        grid-gap: #{$i * $global-gmp}
-    .margin-#{$i}
-        margin: #{$i * $global-gmp}
-    .padding-#{$i}
-        padding: #{$i * $global-gmp}
+
+// *************************************typos starts ***********************************************
+
+.heading
+    font-family: 'Orbitron', sans-serif
+
 
 
 // typography
 
-.heading
-    font-family: 'Orbitron', sans-serif
-        
+h1 
+  font-size: 2.5rem
+
+
+h2 
+  font-size: 2rem
+
+h3 
+  font-size: 1.375rem
+
+
+h4 
+  font-size: 1.125rem
+
+
+h5 
+  font-size: 1rem
+
+
+h6 
+  font-size: 0.875rem
+
+
+p 
+  font-size: 1.125rem
+  font-weight: 200
+  line-height: 1.8
+
+
+.font--light 
+  font-weight: $font-weight-light
+
+.font--regular 
+  font-weight: $font-weight-regular
+
+
+.font--heavy 
+  font-weight: $font-weight-heavy
+
+
+
+.text--left 
+  text-align: left
+
+
+.text--right 
+  text-align: right
+
+
+.text--center 
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+
+
+.text--justify 
+  text-align: justify
+
+
+
+// color section
+.text--light
+    color: $light-color
+.text--danger
+    color: $danger-color
+.text--primary
+    color: $primary-color
+.text--secondary
+    color: $secondary-color
+.text--dark 
+    color: $dark-color
+
+.bg--light
+    background-color: $light-color
+
+.bg--dark
+    background-color: $dark-color
+
+
+// *************************************typos ends ***********************************************
+
+
+// *************************************responsive starts ***********************************************
+
+
+.container 
+  width: 90% 
+  margin-left: auto 
+  margin-right: auto 
+
+  @media only screen and (min-width: $breakpoint-small)  
+    width: 80% 
+   
+
+  @media only screen and (min-width: $breakpoint-large)  
+    width: 75% 
+    max-width: 60rem 
+   
+ 
+
+.row 
+  display: flex  
+  position: relative 
+  width: 100% 
+  flex-wrap: wrap
+
+.col, .col-sm, .col-md, .col-lg
+    width: 50%
+
+
+.col--1, .col--1-sm, .col--1-md, .col--1-lg   
+    width:($width / 12) - ($gutter * 11 / 12)   
+.col--2, .col--2-sm, .col--2-md, .col--2-lg    
+    width: ($width / 6) - ($gutter * 10 / 12)   
+.col--3, .col--3-sm, .col--3-md, .col--3-lg    
+    width: ($width / 4) - ($gutter * 9 / 12)   
+.col--4, .col--4-sm, .col--4-md, .col--4-lg    
+    width: ($width / 3) - ($gutter * 8 / 12)   
+.col--5, .col--5-sm, .col--5-md, .col--5-lg   
+    width: ($width / (12 / 5)) - ($gutter * 7 / 12)   
+.col--6, .col--6-sm, .col--6-md, .col--6-lg   
+    width: ($width / 2) - ($gutter * 6 / 12)   
+.col--7, .col--7-sm, .col--7-md, .col--7-lg   
+    width: ($width / (12 / 7)) - ($gutter * 5 / 12)   
+.col--8, .col--8-sm, .col--8-md, .col--8-lg    
+    width: ($width / (12 / 8)) - ($gutter * 4 / 12)   
+.col--9, .col--9-sm, .col--9-md, .col--9-lg     
+    width: ($width / (12 / 9)) - ($gutter * 3 / 12)   
+.col--10, .col--10-sm, .col--10-md, .col--10-lg    
+    width: ($width / (12 / 10)) - ($gutter * 2 / 12)   
+.col--11, .col--11-sm, .col--11-md, .col--11-lg     
+    width: ($width / (12 / 11)) - ($gutter * 1 / 12)   
+.col--12, .col--12-sm, .col--12-md, .col--12-lg     
+    width: $width  
+
+
+@media only screen and (max-width: $breakpoint-med)
+    .col-sm,
+    .col--1-sm,
+    .col--2-sm,
+    .col--3-sm,
+    .col--4-sm,
+    .col--5-sm,
+    .col--6-sm,
+    .col--7-sm,
+    .col--8-sm,
+    .col--9-sm,
+    .col--10-sm,
+    .col--11-sm,
+    .col--12-sm  
+        width: $width 
+
+    @for  $i from 0 through $gmp-limit
+        .margin--#{$i}-sm,
+        .margin-left--#{$i}-sm,
+        .margin-right--#{$i}-sm,
+        .margin-top--#{$i}-sm,
+        .margin-bottom--#{$i}-sm        
+            margin: 0
+        .padding--#{$i}-sm,
+        .padding-left--#{$i}-sm,
+        .padding-right--#{$i}-sm,
+        .padding-top--#{$i}-sm,
+        .padding-bottom--#{$i}-sm     
+            padding: 0
+
+@media only screen and  (max-width: $breakpoint-large) and (min-width: $breakpoint-med)
+    .col-md,  
+    .col--1-md,
+    .col--2-md,
+    .col--3-md,
+    .col--4-md,
+    .col--5-md,
+    .col--6-md,
+    .col--7-md,
+    .col--8-md,
+    .col--9-md,
+    .col--10-md,
+    .col--11-md,
+    .col--12-md  
+        width: $width 
+
+    @for  $i from 0 through $gmp-limit
+        .margin--#{$i}-md,
+        .margin-left--#{$i}-md,
+        .margin-right--#{$i}-md,
+        .margin-top--#{$i}-md,
+        .margin-bottom--#{$i}-md        
+            margin: 0
+        .padding--#{$i}-md,
+        .padding-left--#{$i}-md,
+        .padding-right--#{$i}-md,
+        .padding-top--#{$i}-md,
+        .padding-bottom--#{$i}-md     
+            padding: 0
+ 
+@media only screen and (max-width: $breakpoint-large)
+    .col-lg,
+    .col--1-lg,
+    .col--2-lg,
+    .col--3-lg,
+    .col--4-lg,
+    .col--5-lg,
+    .col--6-lg,
+    .col--7-lg,
+    .col--8-lg,
+    .col--9-lg,
+    .col--10-lg,
+    .col--11-lg,
+    .col--12-lg  
+        width: $width
+    
+    @for  $i from 0 through $gmp-limit
+        .margin--#{$i}-lg,
+        .margin-left--#{$i}-lg,
+        .margin-right--#{$i}-lg,
+        .margin-top--#{$i}-lg,
+        .margin-bottom--#{$i}-lg        
+            margin: 0
+        .padding--#{$i}-lg,
+        .padding-left--#{$i}-lg,
+        .padding-right--#{$i}-lg,
+        .padding-top--#{$i}-lg,
+        .padding-bottom--#{$i}-lg     
+            padding: 0
+  
+    
+ 
+    

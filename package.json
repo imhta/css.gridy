@@ -1,0 +1,25 @@
+{
+  "name": "css.gridy",
+  "version": "1.0.0",
+  "description": "simple responsive css lib for layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imhtapm/css.gridy.git"
+  },
+  "keywords": [
+    "css",
+    "library",
+    "for",
+    "layouts"
+  ],
+  "author": "imhtop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imhtapm/css.gridy/issues"
+  },
+  "homepage": "https://github.com/imhtapm/css.gridy#readme"
+}
