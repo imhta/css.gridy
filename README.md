@@ -11,7 +11,7 @@ Simple responsive framework for the layout and this built with two layout system
  - SASS
 
 ### Preview 
-[Documentation link](https://cssgridy.imhta.now.sh)
+[Documentation link](https://cssgridy.now.sh/)
 
 ### Contributor
 [@imhtapm](https://github.com/imhtapm)
