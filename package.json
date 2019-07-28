@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/imhtapm/css.gridy/issues"
   },
-  "homepage": "https://github.com/imhtapm/css.gridy#readme"
+  "homepage": "https://github.com/imhtapm/css.gridy#readme",
+  "devDependencies": {
+    "webpack": "^4.38.0"
+  }
 }
