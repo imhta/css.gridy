@@ -12,7 +12,17 @@ Simple responsive framework for the layout and this built with two layout system
 - CSS and
 - SASS
 
-## Use
+### CDN 
+```
+<link rel="stylesheet" href="https://unpkg.com/css.gridy@1.0.1/dist/css/gridy.css" />
+
+```
+Or
+
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css.gridy@1.0.1/dist/css/gridy.min.css" />
+```
+### With npm
 
 ```
 npm install css.gridy --save
