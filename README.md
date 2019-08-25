@@ -3,7 +3,7 @@
      width="150">
 
 # css.gridy
-Simple responsive framework for the layout and this built with two layout system. using this layout, can complex UI using grid and flex. 
+Simple responsive framework for the layout and this built with two layout system. using this layout, anyone can build complex UI using grid and flex. 
 
 ### This project is built with 
  - HTML
