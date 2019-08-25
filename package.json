@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imhtapm/css.gridy.git"
+    "url": "git+https://github.com/imhta/css.gridy.git"
   },
   "keywords": [
     "css",
@@ -16,12 +16,12 @@
     "for",
     "layouts"
   ],
-  "author": "imhtop",
+  "author": "imhtapm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/imhtapm/css.gridy/issues"
+    "url": "https://github.com/imhta/css.gridy/issues"
   },
-  "homepage": "https://github.com/imhtapm/css.gridy#readme",
+  "homepage": "https://github.com/imhta/css.gridy#readme",
   "devDependencies": {
     "webpack": "^4.38.0"
   }
