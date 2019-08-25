@@ -1,6 +1,6 @@
 {
   "name": "css.gridy",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "simple responsive css lib for layout",
   "main": "index.js",
   "scripts": {
