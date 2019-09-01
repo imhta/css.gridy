@@ -42,10 +42,10 @@ $dark-gray: #333447
 
 
 @for  $i from 1 through $row-col-limit 
-  .no-of-col--#{$i}  
-    grid-template-columns: repeat( $i, 1fr)
-  .no-of-row--#{$i}  
-    grid-template-rows: repeat( $i, 1fr)
+    .no-of-col--#{$i}  
+        grid-template-columns: repeat( $i, 1fr)
+    .no-of-row--#{$i}  
+        grid-template-rows: repeat( $i, 1fr)
 
 @for  $i from 0 through $gmp-limit
     .gap--#{$i} 
@@ -108,7 +108,7 @@ $dark-gray: #333447
 .display--inline-flex
     display: inline-flex
 .hide
-  display: none
+    display: none
 
 
 
@@ -144,9 +144,9 @@ $dark-gray: #333447
 
 // z-index 
 .z-index--minus-1
-   z-index:  -1
+    z-index:  -1
 .z-index--zero
-   z-index:  0
+    z-index:  0
 @for  $i from 0 through 12
     .z-index--#{$i}
         z-index: $i
@@ -247,62 +247,62 @@ $dark-gray: #333447
 // typography
 
 h1 
-  font-size: 2.5rem
+    font-size: 2.5rem
 
 
 h2 
-  font-size: 2rem
+    font-size: 2rem
 
 h3 
-  font-size: 1.375rem
+    font-size: 1.375rem
 
 
 h4 
-  font-size: 1.125rem
+    font-size: 1.125rem
 
 
 h5 
-  font-size: 1rem
+    font-size: 1rem
 
 
 h6 
-  font-size: 0.875rem
+    font-size: 0.875rem
 
 
 p 
-  font-size: 1.125rem
-  font-weight: 200
-  line-height: 1.8
+    font-size: 1.125rem
+    font-weight: 200
+    line-height: 1.8
 
 
 .font--light 
-  font-weight: $font-weight-light
+    font-weight: $font-weight-light
 
 .font--regular 
-  font-weight: $font-weight-regular
+    font-weight: $font-weight-regular
 
 
 .font--heavy 
-  font-weight: $font-weight-heavy
+    font-weight: $font-weight-heavy
 
 
 
 .text--left 
-  text-align: left
+    text-align: left
 
 
 .text--right 
-  text-align: right
+    text-align: right
 
 
 .text--center 
-  text-align: center
-  margin-left: auto
-  margin-right: auto
+    text-align: center
+    margin-left: auto
+    margin-right: auto
 
 
 .text--justify 
-  text-align: justify
+    text-align: justify
 
 
 
@@ -325,152 +325,152 @@ p
     background-color: $dark-color
 
 
-// *************************************typos ends ***********************************************
+// // *************************************typos ends ***********************************************
 
 
-// *************************************responsive starts ***********************************************
+// // *************************************responsive starts ***********************************************
 
 
-.container 
-  width: 90% 
-  margin-left: auto 
-  margin-right: auto 
+// .container 
+//     width: 90% 
+//     margin-left: auto 
+//     margin-right: auto 
 
-  @media only screen and (min-width: $breakpoint-small)  
-    width: 80% 
+//     @media only screen and (min-width: $breakpoint-small)  
+//         width: 80% 
    
 
-  @media only screen and (min-width: $breakpoint-large)  
-    width: 75% 
-    max-width: 60rem 
+//     @media only screen and (min-width: $breakpoint-large)  
+//         width: 75% 
+//         max-width: 60rem 
    
  
 
-.row 
-  display: flex  
-  position: relative 
-  width: 100% 
-  flex-wrap: wrap
+// .row 
+//     display: flex  
+//     position: relative 
+//     width: 100% 
+//     flex-wrap: wrap
 
-.col, .col-sm, .col-md, .col-lg
-    width: 50%
-
-
-.col--1, .col--1-sm, .col--1-md, .col--1-lg   
-    width:($width / 12) - ($gutter * 11 / 12)   
-.col--2, .col--2-sm, .col--2-md, .col--2-lg    
-    width: ($width / 6) - ($gutter * 10 / 12)   
-.col--3, .col--3-sm, .col--3-md, .col--3-lg    
-    width: ($width / 4) - ($gutter * 9 / 12)   
-.col--4, .col--4-sm, .col--4-md, .col--4-lg    
-    width: ($width / 3) - ($gutter * 8 / 12)   
-.col--5, .col--5-sm, .col--5-md, .col--5-lg   
-    width: ($width / (12 / 5)) - ($gutter * 7 / 12)   
-.col--6, .col--6-sm, .col--6-md, .col--6-lg   
-    width: ($width / 2) - ($gutter * 6 / 12)   
-.col--7, .col--7-sm, .col--7-md, .col--7-lg   
-    width: ($width / (12 / 7)) - ($gutter * 5 / 12)   
-.col--8, .col--8-sm, .col--8-md, .col--8-lg    
-    width: ($width / (12 / 8)) - ($gutter * 4 / 12)   
-.col--9, .col--9-sm, .col--9-md, .col--9-lg     
-    width: ($width / (12 / 9)) - ($gutter * 3 / 12)   
-.col--10, .col--10-sm, .col--10-md, .col--10-lg    
-    width: ($width / (12 / 10)) - ($gutter * 2 / 12)   
-.col--11, .col--11-sm, .col--11-md, .col--11-lg     
-    width: ($width / (12 / 11)) - ($gutter * 1 / 12)   
-.col--12, .col--12-sm, .col--12-md, .col--12-lg     
-    width: $width  
+// .col, .col-sm, .col-md, .col-lg
+//     width: 50%
 
 
-@media only screen and (max-width: $breakpoint-med)
-    .col-sm,
-    .col--1-sm,
-    .col--2-sm,
-    .col--3-sm,
-    .col--4-sm,
-    .col--5-sm,
-    .col--6-sm,
-    .col--7-sm,
-    .col--8-sm,
-    .col--9-sm,
-    .col--10-sm,
-    .col--11-sm,
-    .col--12-sm  
-        width: $width 
+// .col--1, .col--1-sm, .col--1-md, .col--1-lg   
+//     width:($width / 12) - ($gutter * 11 / 12)   
+// .col--2, .col--2-sm, .col--2-md, .col--2-lg    
+//     width: ($width / 6) - ($gutter * 10 / 12)   
+// .col--3, .col--3-sm, .col--3-md, .col--3-lg    
+//     width: ($width / 4) - ($gutter * 9 / 12)   
+// .col--4, .col--4-sm, .col--4-md, .col--4-lg    
+//     width: ($width / 3) - ($gutter * 8 / 12)   
+// .col--5, .col--5-sm, .col--5-md, .col--5-lg   
+//     width: ($width / (12 / 5)) - ($gutter * 7 / 12)   
+// .col--6, .col--6-sm, .col--6-md, .col--6-lg   
+//     width: ($width / 2) - ($gutter * 6 / 12)   
+// .col--7, .col--7-sm, .col--7-md, .col--7-lg   
+//     width: ($width / (12 / 7)) - ($gutter * 5 / 12)   
+// .col--8, .col--8-sm, .col--8-md, .col--8-lg    
+//     width: ($width / (12 / 8)) - ($gutter * 4 / 12)   
+// .col--9, .col--9-sm, .col--9-md, .col--9-lg     
+//     width: ($width / (12 / 9)) - ($gutter * 3 / 12)   
+// .col--10, .col--10-sm, .col--10-md, .col--10-lg    
+//     width: ($width / (12 / 10)) - ($gutter * 2 / 12)   
+// .col--11, .col--11-sm, .col--11-md, .col--11-lg     
+//     width: ($width / (12 / 11)) - ($gutter * 1 / 12)   
+// .col--12, .col--12-sm, .col--12-md, .col--12-lg     
+//     width: $width  
 
-    @for  $i from 0 through $gmp-limit
-        .margin--#{$i}-sm,
-        .margin-left--#{$i}-sm,
-        .margin-right--#{$i}-sm,
-        .margin-top--#{$i}-sm,
-        .margin-bottom--#{$i}-sm        
-            margin: 0
-        .padding--#{$i}-sm,
-        .padding-left--#{$i}-sm,
-        .padding-right--#{$i}-sm,
-        .padding-top--#{$i}-sm,
-        .padding-bottom--#{$i}-sm     
-            padding: 0
 
-@media only screen and  (max-width: $breakpoint-large) and (min-width: $breakpoint-med)
-    .col-md,  
-    .col--1-md,
-    .col--2-md,
-    .col--3-md,
-    .col--4-md,
-    .col--5-md,
-    .col--6-md,
-    .col--7-md,
-    .col--8-md,
-    .col--9-md,
-    .col--10-md,
-    .col--11-md,
-    .col--12-md  
-        width: $width 
+// @media only screen and (max-width: $breakpoint-med)
+//     .col-sm,
+//     .col--1-sm,
+//     .col--2-sm,
+//     .col--3-sm,
+//     .col--4-sm,
+//     .col--5-sm,
+//     .col--6-sm,
+//     .col--7-sm,
+//     .col--8-sm,
+//     .col--9-sm,
+//     .col--10-sm,
+//     .col--11-sm,
+//     .col--12-sm  
+//         width: $width 
 
-    @for  $i from 0 through $gmp-limit
-        .margin--#{$i}-md,
-        .margin-left--#{$i}-md,
-        .margin-right--#{$i}-md,
-        .margin-top--#{$i}-md,
-        .margin-bottom--#{$i}-md        
-            margin: 0
-        .padding--#{$i}-md,
-        .padding-left--#{$i}-md,
-        .padding-right--#{$i}-md,
-        .padding-top--#{$i}-md,
-        .padding-bottom--#{$i}-md     
-            padding: 0
+//     @for  $i from 0 through $gmp-limit
+//         .margin--#{$i}-sm,
+//         .margin-left--#{$i}-sm,
+//         .margin-right--#{$i}-sm,
+//         .margin-top--#{$i}-sm,
+//         .margin-bottom--#{$i}-sm        
+//             margin: 0
+//         .padding--#{$i}-sm,
+//         .padding-left--#{$i}-sm,
+//         .padding-right--#{$i}-sm,
+//         .padding-top--#{$i}-sm,
+//         .padding-bottom--#{$i}-sm     
+//             padding: 0
+
+// @media only screen and  (max-width: $breakpoint-large) and (min-width: $breakpoint-med)
+//     .col-md,  
+//     .col--1-md,
+//     .col--2-md,
+//     .col--3-md,
+//     .col--4-md,
+//     .col--5-md,
+//     .col--6-md,
+//     .col--7-md,
+//     .col--8-md,
+//     .col--9-md,
+//     .col--10-md,
+//     .col--11-md,
+//     .col--12-md  
+//         width: $width 
+
+//     @for  $i from 0 through $gmp-limit
+//         .margin--#{$i}-md,
+//         .margin-left--#{$i}-md,
+//         .margin-right--#{$i}-md,
+//         .margin-top--#{$i}-md,
+//         .margin-bottom--#{$i}-md        
+//             margin: 0
+//         .padding--#{$i}-md,
+//         .padding-left--#{$i}-md,
+//         .padding-right--#{$i}-md,
+//         .padding-top--#{$i}-md,
+//         .padding-bottom--#{$i}-md     
+//             padding: 0
  
-@media only screen and (max-width: $breakpoint-large)
-    .col-lg,
-    .col--1-lg,
-    .col--2-lg,
-    .col--3-lg,
-    .col--4-lg,
-    .col--5-lg,
-    .col--6-lg,
-    .col--7-lg,
-    .col--8-lg,
-    .col--9-lg,
-    .col--10-lg,
-    .col--11-lg,
-    .col--12-lg  
-        width: $width
+// @media only screen and (max-width: $breakpoint-large)
+//     .col-lg,
+//     .col--1-lg,
+//     .col--2-lg,
+//     .col--3-lg,
+//     .col--4-lg,
+//     .col--5-lg,
+//     .col--6-lg,
+//     .col--7-lg,
+//     .col--8-lg,
+//     .col--9-lg,
+//     .col--10-lg,
+//     .col--11-lg,
+//     .col--12-lg  
+//         width: $width
     
-    @for  $i from 0 through $gmp-limit
-        .margin--#{$i}-lg,
-        .margin-left--#{$i}-lg,
-        .margin-right--#{$i}-lg,
-        .margin-top--#{$i}-lg,
-        .margin-bottom--#{$i}-lg        
-            margin: 0
-        .padding--#{$i}-lg,
-        .padding-left--#{$i}-lg,
-        .padding-right--#{$i}-lg,
-        .padding-top--#{$i}-lg,
-        .padding-bottom--#{$i}-lg     
-            padding: 0
+//     @for  $i from 0 through $gmp-limit
+//         .margin--#{$i}-lg,
+//         .margin-left--#{$i}-lg,
+//         .margin-right--#{$i}-lg,
+//         .margin-top--#{$i}-lg,
+//         .margin-bottom--#{$i}-lg        
+//             margin: 0
+//         .padding--#{$i}-lg,
+//         .padding-left--#{$i}-lg,
+//         .padding-right--#{$i}-lg,
+//         .padding-top--#{$i}-lg,
+//         .padding-bottom--#{$i}-lg     
+//             padding: 0
   
     
  
